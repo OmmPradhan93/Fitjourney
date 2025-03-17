@@ -1,0 +1,41 @@
+root { 
+    display: block;
+}
+
+.root {
+     -fx-background-image: url("bg1414651.jpg");
+     -fx-background-size: cover; 
+     -fx-background-position: center;
+     -fx-background-repeat: no-repeat; 
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17687c;
+    -fx-effect: dropshadow( gaussian , rgba(247, 244, 244, 0.5) , 0,0,0,1 );
+}
+
+#welcome-text {
+   -fx-font-size: 32px;
+   -fx-fill: #000000;
+   -fx-effect: innershadow( three-pass-box , rgba(0,1,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#actiontarget {
+  -fx-fill: FIREBRICK;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
+
+.button {
+    -fx-text-fill: rgb(42, 109, 218);
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #68d395);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#79e0ca, #61a2b1);
+}

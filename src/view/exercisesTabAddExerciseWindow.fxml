@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.exercises.AddExerciseController">
+   <children>
+      <TableView fx:id="tvExercises" layoutX="36.0" layoutY="95.0" prefHeight="243.0" prefWidth="264.0">
+        <columns>
+          <TableColumn fx:id="tcExercise" prefWidth="266.0" text="Exercise" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddExercise" layoutX="502.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleAddExercise" text="Add Exercise" />
+      <GridPane layoutX="317.0" layoutY="95.0" prefHeight="243.0" prefWidth="244.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="105.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="156.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="192.0" text="Total Sets:" />
+            <TextField fx:id="tfSets" onKeyTyped="#handleTextField" GridPane.columnIndex="1" />
+            <Label text="Reps:" GridPane.rowIndex="1" />
+            <TextField fx:id="tfReps" onKeyTyped="#handleTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="230.0" text="Weight:" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="tfWeight"  onKeyTyped="#handleTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Calories Burned:" GridPane.rowIndex="3" />
+            <TextField fx:id="tfCaloriesBurned" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TextField fx:id="tfSearch" layoutX="60.0" layoutY="60.0" prefHeight="25.0" prefWidth="149.0" promptText="Search here!" />
+      <Label layoutX="256.0" layoutY="25.0" text="Adding Exercises" />
+      <Button fx:id="btnSearch" layoutX="222.0" layoutY="60.0" mnemonicParsing="false" text="Search" />
+      <CheckBox fx:id="checkBoxEstimate" layoutX="340.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleEstimateCaloriesBurned" prefHeight="46.0" prefWidth="166.0" text="Estimate calories burned" />
+   </children>
+</AnchorPane>
